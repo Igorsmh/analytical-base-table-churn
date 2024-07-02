@@ -35,10 +35,9 @@ def to_parquet() -> pd.DataFrame:
 
     """
    
-
-    data = pd.read_csv(r"\data\abt_churn_20240620.csv")
+    data = pd.read_csv(r"data\abt_churn_20240620.csv",sep=';')
     dataset = data.copy()
-       
+    
     return dataset.to_parquet(\
     r'C:\Users\igors\Documentos\Estudo_python\Kaggle\Analytical Base Table Churn\data\teocalvo_churn.parquet',\
      engine='pyarrow')
